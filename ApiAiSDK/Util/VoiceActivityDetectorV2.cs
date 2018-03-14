@@ -47,9 +47,11 @@ namespace ApiAiSDK
 
         public bool Enabled { get; set; }
 
+#pragma warning disable
         public event Action SpeechBegin;
         public event Action SpeechEnd;
         public event Action<float> AudioLevelChange;
+#pragma warning restore
 
 
         public VoiceActivityDetectorV2(int sampleRate)

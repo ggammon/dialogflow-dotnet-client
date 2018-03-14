@@ -48,7 +48,7 @@ namespace ApiAiSDK
         public AIResponse Request(AIRequest request)
         {
             request.Language = config.Language.code;
-            request.Timezone = TimeZone.CurrentTimeZone.StandardName;
+            request.Timezone = System.TimeZoneInfo.Local.StandardName;
             request.SessionId = SessionId;
             
             try
@@ -106,7 +106,7 @@ namespace ApiAiSDK
         {
             var request = new AIRequest();
             request.Language = config.Language.code;
-            request.Timezone = TimeZone.CurrentTimeZone.StandardName;
+            request.Timezone = System.TimeZone.CurrentTimeZone.StandardName;
             request.SessionId = SessionId;
 
             if (requestExtras != null)

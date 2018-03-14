@@ -5,18 +5,18 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity Name="58fa9d94-7d1d-46dc-abf5-f45ccda6c562"
-            Publisher="CN=xvir"
+  <Identity Name="4fbf19f5-8370-4145-a8ca-3e0902d8c3e0"
+            Publisher="CN=solda"
             Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="58fa9d94-7d1d-46dc-abf5-f45ccda6c562" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="4fbf19f5-8370-4145-a8ca-3e0902d8c3e0" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ApiAiSDK.W10.Tests</DisplayName>
-    <PublisherDisplayName>xvir</PublisherDisplayName>
+    <PublisherDisplayName>solda</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-  
+
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
@@ -25,7 +25,7 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="vstest.executionengine.universal.App" 
+    <Application Id="vstest.executionengine.universal.App"
         Executable="$targetnametoken$.exe"
         EntryPoint="ApiAiSDK.W10.Tests.App">
       <uap:VisualElements
@@ -40,6 +40,6 @@
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities> 
+    <Capability Name="internetClientServer" />
+  </Capabilities>
 </Package>

@@ -19,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApiAiSDK.Model;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ApiAiSDK.W10.Tests
 {
@@ -210,7 +210,7 @@ namespace ApiAiSDK.W10.Tests
                 var aiResponse = await MakeRequestAsync(dataService, aiRequest);
                 Assert.IsTrue(false, "Request should throws bad_request exception");
             }
-            catch (AIServiceException e)
+            catch (AIServiceException)
             {
                 Assert.IsTrue(true);
             }

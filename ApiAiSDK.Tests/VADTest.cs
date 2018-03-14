@@ -176,8 +176,7 @@ namespace ApiAiSDK.Tests
 
         private Stream ReadFileFromResource(string resourceId)
         {
-            Assembly a = Assembly.GetExecutingAssembly();
-            Stream stream = a.GetManifestResourceStream("ApiAiSDK.Tests.TestData." + resourceId);
+            Stream stream = this.GetType().Assembly.GetManifestResourceStream("ApiAiSDK.Tests.TestData." + resourceId);
             return stream;
         }
 

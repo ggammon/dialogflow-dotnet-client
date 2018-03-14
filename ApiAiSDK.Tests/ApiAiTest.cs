@@ -62,7 +62,7 @@ namespace ApiAiSDK.Tests
 			var config = new AIConfiguration(ACCESS_TOKEN, SupportedLanguage.English);
 
 			var apiAi = new ApiAi(config);
-			var stream = ReadFileFromResource("ApiAiSDK.Tests.TestData.what_is_your_name.raw");
+			var stream = ReadFileFromResource("what_is_your_name.raw");
 
 			var response = apiAi.VoiceRequest(stream);
 
@@ -72,10 +72,10 @@ namespace ApiAiSDK.Tests
 
 		private Stream ReadFileFromResource(string resourceId)
 		{
-			Assembly a = Assembly.GetExecutingAssembly();
-			Stream stream = a.GetManifestResourceStream(resourceId);
-			return stream;
-		}
+            var res = this.GetType().Assembly.GetManifestResourceNames();
+            Stream stream = this.GetType().Assembly.GetManifestResourceStream("ApiAiSDK.Tests.TestData." + resourceId);
+            return stream;
+        }
 
 	}
 }
